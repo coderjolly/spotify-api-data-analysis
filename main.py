@@ -7,7 +7,7 @@ from sql_functions import *
 import sys
 import urllib
 
-def spotify_capstone():
+def spotify_main():
     spotify_client_id = "<client_id>"
     spotify_client_secret = "<client_secret>"
     spotify_redirect_url = "http://localhost:8080"
@@ -182,4 +182,4 @@ def spotify_capstone():
 
     return album_list
 
-print(spotify_capstone())
+print(spotify_main())

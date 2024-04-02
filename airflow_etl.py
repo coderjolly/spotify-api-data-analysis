@@ -2,7 +2,7 @@ from datetime import timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
-from main import spotify_capstone
+from main import spotify_main
 
 my_args = {
     'owner': 'airflow',
@@ -23,7 +23,7 @@ my_dag = DAG(
 
 run_etl = PythonOperator(
     task_id='spotify_capstone',
-    python_callable= spotify_capstone,
+    python_callable= spotify_main,
     dag=my_dag
 )
 run_etl
