@@ -1,4 +1,4 @@
-# spotify-api-data-analysis
+# Spotify Data Engineering & Analysis
 
 About a decade ago, the term "data engineering" emerged in forward-thinking companies like Facebook, Netflix, LinkedIn, and Airbnb, driven by their need to manage vast amounts of real-time data efficiently. To cope, engineers at these firms crafted custom tools and platforms for handling data swiftly, reliably, and at scale, moving away from traditional ETL tools.
 
