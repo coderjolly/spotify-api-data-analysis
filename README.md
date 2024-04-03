@@ -22,11 +22,40 @@ So, Apache Airflow was used to create an ETL pipeline from the Spotify API, focu
 
 ## Architecture
 
-![Architecture](ss/architecture.png)
+![architecture](ss/architecture.png)
 
 Data was extracted out of the Spotify API using API endpoint to get the 25 most recently played tracks. The result of calling this endpoint is a dictionary which will be taken and created into multiple dataframes after cleaning it. SSMS cannot be directly connected from Python using SQLalchemy library.
 
 Once the necessary libraries are installed SSMS can be connected using windows authentication or using username-password. Windows authentication is used to connect with SSMS in this case, and while connecting to SSMS one has to mention the username and database name.
 
-After a successful connection one can load the data directly from python to SSMS. The Snowflake Schema approach was followed to store the data in SSMS.
+After a successful connection one can load the data directly from python to SSMS. The Snowflake Schema approach was followed to store the data in SSMS. The schema is as follows:
+
+![schema](ss/schema.png)
+
+## Scheduling and Automation
+
+Apache Airflow was utilized for scheduling and automating tasks. Airflow serves as a workflow management tool specifically designed for scheduling data engineering pipelines. 
+
+To automate our ETL processes, scripts and configured DAG files within Airflow to schedule these tasks and run automatically were developed. The Airflow Directed Acyclic Graph (DAG) homepage and grid view are shown below:
+
+![airflow-dag-homepage](ss/airflow-dag-homepage.png)
+
+![airflow-grid-view](ss/airflow-grid-view.png)
+
+The following commands were used to start the Airflow web server and scheduler:
+
+```zsh
+airflow db init
+
+airflow dags list
+
+airflow tasks list spotify_dag
+
+airflow scheduler
+
+airflow webserver
+```
+## Future Scope
+
+- Initialise Machine Learning models on the extracted data to apply recommendation models to recommend tracks to the user based on their preferences or listening history (content based or collaborative based).
 
