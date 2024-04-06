@@ -8,16 +8,16 @@ So, Apache Airflow was used to create an ETL pipeline from the Spotify API, focu
 ```
 ├── PowerBI-reports/              <- Contains PowerBI report files.
 │   └── spotifyuserdashboard.pbix <- PowerBI report file for Spotify user dashboard.
-├── README.md                     <- Top-level README file providing an overview of the project.
-├── airflow_etl.py                <- Script for the Airflow Extract, Transform, and Load (ETL) process.
-├── main.py                       <- Main application script.
 ├── sql-server-database/          <- Contains SQL Server database files.
 │   └── spotify_analysis.mdf      <- SQL Server database file for Spotify analysis.
-├── sql_functions.py              <- Script containing SQL functions.
-└── ss/                           <- Contains screenshots or images related to the project.
+├── ss/                           <- Contains screenshots or images related to the project.
     ├── airflow-dag-homepage.png  <- Screenshot of Airflow Directed Acyclic Graph (DAG) homepage.
     ├── airflow-grid-view.png     <- Screenshot of Airflow grid view.
     └── architecture.png          <- Image depicting project architecture.
+├── README.md                     <- Top-level README file providing an overview of the project.
+├── airflow_etl.py                <- Script for the Airflow Extract, Transform, and Load (ETL) process.
+├── main.py                       <- Main application script.
+└── sql_functions.py              <- Script containing SQL functions.
 ```
 
 ## Architecture
